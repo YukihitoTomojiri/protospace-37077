@@ -30,6 +30,7 @@
 
 ## commentsテーブル
 | column    | Type       | Options           |
+| --------- | ---------- | ----------------- |
 | content   | text       | NOT NULL          |
 | prototype | references | NOT NULL, 外部キー |
 | user      | references | NOT NULL, 外部キー |
