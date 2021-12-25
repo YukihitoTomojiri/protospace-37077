@@ -19,6 +19,8 @@ class PrototypesController < ApplicationController
 
   def show
     @prototype = Prototype.find(params[:id])
+    @comment = Comment.new
+    @comments = Comment.includes(:prototype)
   end
 
   def edit
@@ -35,7 +37,6 @@ class PrototypesController < ApplicationController
   end
 
   def destroy
-    binding.pry
     prototype = Prototype.find(params[:id])
     prototype.destroy
     redirect_to root_path
